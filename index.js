@@ -9,6 +9,7 @@ function updateMap(){
                  lat = country.countryInfo.lat;
                     long = country.countryInfo.long;
                     deaths = country.deaths;
+
                     if(deaths<500){
                         color = "rgb(128, 128, 128)"
                     }
@@ -32,9 +33,15 @@ function updateMap(){
                     var marker = new mapboxgl.Marker({
                     draggable: false,
                     color:color
+
                 })
+                
+        
                 .setLngLat([long, lat])
                 .addTo(map);
+                
+                
+                
             })
 
         }
